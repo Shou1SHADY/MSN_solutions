@@ -20,8 +20,10 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Empowering Growth with{" "}
+            <span className="text-accent">Innovative, Reliable, Scalable</span>
+            <br />
+            Technology Solutions
           </motion.h1>
 
           {/* subtitle */}
@@ -32,10 +34,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            We design and deliver technology that helps businesses and individuals
+            thrive in a digital‑first world. From concept to code to cloud, we
+            build dependable products that scale.
           </motion.p>
 
           {/* btn */}

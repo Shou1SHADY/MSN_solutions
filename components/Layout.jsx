@@ -19,10 +19,10 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Ethan Smith | Portfolio</title>
+        <title>NextGen Software | Egyptian Software House</title>
         <meta
           name="description"
-          content="Ethan Smith is a Full-stack web developer with 10+ years of experience."
+          content="NextGen Software is an Egyptian software house designing and delivering innovative, reliable, and scalable technology solutions."
         />
         <meta
           name="keywords"

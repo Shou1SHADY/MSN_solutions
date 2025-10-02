@@ -120,8 +120,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            We are an Egyptian <span className="text-accent">software house</span>
+            transforming ideas into impactful digital solutions.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -129,10 +129,36 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            Our team designs and delivers innovative, reliable, and scalable
+            technology solutions for businesses and individuals. With a focus on
+            quality and long‑term partnerships, we take products from concept to
+            launch and beyond.
           </motion.p>
+
+          {/* Mission & Vision */}
+          <motion.div
+            variants={fadeIn("right", 0.5)}
+            initial="hidden"
+            animate="show"
+            className="grid gap-6 max-w-[700px] mx-auto xl:mx-0 mb-10"
+          >
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-left">
+              <h3 className="text-xl font-semibold mb-2">Mission</h3>
+              <p className="text-white/80">
+                “To design and deliver innovative, reliable, and scalable technology
+                solutions that empower businesses and individuals to thrive in a
+                digital-first world.”
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-left">
+              <h3 className="text-xl font-semibold mb-2">Vision</h3>
+              <p className="text-white/80">
+                “To become a leading software house from Egypt with global reach,
+                recognized for creativity, excellence, and transforming ideas into
+                impactful digital solutions.”
+              </p>
+            </div>
+          </motion.div>
 
           {/* counters */}
           <motion.div
