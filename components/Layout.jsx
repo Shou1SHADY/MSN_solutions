@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
           name="keywords"
           content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
         />
-        <meta name="author" content="Sanidhya Kumar Verma" />
+        <meta name="author" content="Shady Osama " />
         <meta name="theme-color" content="#f13024" />
       </Head>
 
@@ -38,6 +38,8 @@ const Layout = ({ children }) => {
 
       {/* main content */}
       {children}
+      {/* global bottom spacer to ensure vertical scroll */}
+      <div className="pointer-events-none h-[200px] w-full shrink-0 relative z-0" aria-hidden="true" />
     </main>
   );
 };

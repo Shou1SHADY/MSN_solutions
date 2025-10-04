@@ -22,7 +22,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              My services <span className="text-accent">.</span>
+              Software Solutions <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,8 +31,11 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              We design, build, and maintain modern software products end‑to‑end:
+              web and mobile apps, cloud‑native backends, and integrations that
+              scale. From discovery and UX to development, testing, and
+              deployment, we deliver reliable, secure, and high‑performance
+              solutions tailored to your business.
             </motion.p>
           </div>
 

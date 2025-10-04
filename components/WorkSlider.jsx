@@ -13,22 +13,22 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "Tourism Agency Website",
           path: "/thumb1.jpg",
-          link: "http://example.com",
+          link: "https://www.momo-travel.com/en",
         },
         {
-          title: "title",
+          title: "Company Portfolio",
           path: "/thumb2.jpg",
-          link: "http://example.com",
+          link: "https://www.asellz.net",
         },
         {
-          title: "title",
+          title: "Mobile Banking App",
           path: "/thumb3.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "Cloud Analytics",
           path: "/thumb4.jpg",
           link: "http://example.com",
         },
@@ -37,22 +37,22 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "AI Chatbot System",
           path: "/thumb4.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "IoT Management",
           path: "/thumb1.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "API Integration",
           path: "/thumb2.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "Data Visualization",
           path: "/thumb3.jpg",
           link: "http://example.com",
         },

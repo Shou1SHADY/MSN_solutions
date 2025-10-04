@@ -1,27 +1,56 @@
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
+import emailjs from '@emailjs/browser';
 
 import { fadeIn } from "../../variants";
 import { useState } from "react";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsLoading(true);
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    // Check if EmailJS is properly configured
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    if (!serviceId || !templateId || !publicKey || 
+        serviceId === 'your_service_id' || 
+        templateId === 'your_template_id' || 
+        publicKey === 'your_public_key') {
+      alert("Email service is not configured yet. Please contact us directly or try again later.");
+      setIsLoading(false);
+      return;
+    }
+
+    const formData = {
+      from_name: event.target.name.value,
+      from_email: event.target.email.value,
+      subject: event.target.subject.value,
+      message: event.target.message.value,
+    };
+
+    emailjs.send(serviceId, templateId, formData, publicKey)
+      .then(() => {
+        setIsSubmitted(true);
+        event.target.reset();
+        alert("Thank you! Your message has been sent successfully. We'll get back to you ASAP.");
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        if (error.status === 400) {
+          alert("Email service configuration error. Please contact us directly or try again later.");
+        } else {
+          alert("Sorry, there was an error sending your message. Please try again or contact us directly.");
+        }
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -102,7 +131,7 @@ const Contact = () => {
               aria-disabled={isLoading}
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
+                {isLoading ? 'Sending...' : "Let's talk"}
               </span>
 
               <BsArrowRight
